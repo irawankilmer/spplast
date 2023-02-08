@@ -9,4 +9,10 @@
 <body>
     <center>
 
-<?php require 'menu.php'; ?>
+<?php require 'menu.php'; 
+
+if(!isset($_SESSION['login'])){
+    header('Location:index.php');
+}
+
+?>

@@ -45,6 +45,7 @@ if (isset($_POST['cari'])) {
 		<br>
 		<hr>
 		<h1>Buku SPP</h1>
+		<a href="report/cetak.php?id=<?= $data['idSiswa']; ?>">Cetak Buku SPP</a>
 		<hr>
 		<table border="1" cellpadding="10" cellspacing="0">
 			<tr>
