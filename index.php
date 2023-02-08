@@ -99,6 +99,15 @@ if (isset($_GET['url'])) {
             break;
         // End pembayaran
 
+        case 'bukuspp':
+            require 'siswa/bukuspp.php';
+            break;
+
+        case 'cetak':
+            require 'report/cetak.php';
+            break;
+
+
         default:
             require '404.php';
             break;

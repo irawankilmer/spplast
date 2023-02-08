@@ -10,6 +10,10 @@
     <a href="index.php?url=pembayaran">Pembayaran</a>
 <?php endif ?>
 
+<?php if($_SESSION['level'] === 'siswa') : ?>
+    <a href="index.php?url=bukuspp">Buku SPP</a>
+<?php endif ?>
+
 | <a href="auth/logout.php">Logout</a>
 
 <br>

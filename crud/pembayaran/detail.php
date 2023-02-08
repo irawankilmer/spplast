@@ -24,3 +24,9 @@ Nis : <?= $data[0]['nis']; ?><br>
 Kelas : <?= $data[0]['namaKelas']; ?><br>
 Jurusan : <?= $data[0]['kompetensiKeahlian']; ?><br>
 <hr>
+
+<?php if ($_SESSION['level'] == 'siswa'): ?>
+	<a href="index.php?url=bukuspp">Kembali</a> | 
+<?php endif ?>
+
+<a href="report/cetakbulanan.php?id=<?= $data[0]['idPembayaran']; ?>">Cetak</a>
