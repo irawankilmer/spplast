@@ -67,6 +67,24 @@ if (isset($_GET['url'])) {
             break;
         // End petugas
 
+        // siswa
+        case 'siswa':
+            require 'crud/siswa/home.php';
+            break;
+
+        case 'siswaAdd':
+            require 'crud/siswa/tambah.php';
+            break;
+
+        case 'siswaHapus':
+            require 'crud/siswa/hapus.php';
+            break;
+
+        case 'siswaEdit':
+            require 'crud/siswa/edit.php';
+            break;
+        // End siswa
+
         default:
             require '404.php';
             break;

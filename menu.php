@@ -1,6 +1,7 @@
 <a href="index.php?url=home">Home</a> | 
 <?php if($_SESSION['level'] === 'admin') : ?>
-    <a href="index.php?url=kelas">Kelas</a> | siswa | 
+    <a href="index.php?url=kelas">Kelas</a> | 
+    <a href="index.php?url=siswa">siswa</a> | 
     <a href="index.php?url=spp">Spp</a> |
     <a href="index.php?url=petugas">Petugas</a> | 
 <?php endif ?>

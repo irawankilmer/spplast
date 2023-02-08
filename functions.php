@@ -52,4 +52,45 @@ function cekData($table, $clausa, $value) {
 }
 
 
+function selectDataJoin($query) {
+    global $conn;
+
+    $query = mysqli_query($conn, $query);
+
+    $rows = [];
+
+    while ($row = mysqli_fetch_assoc($query)) {
+        $rows[] = $row;
+    }
+
+    return $rows;
+}
+
+function insertSiswaSpp($data)
+{
+    global $conn;
+
+    $nisn       = htmlspecialchars($data['nisn']);
+    $nis        = htmlspecialchars($data['nis']);
+    $nama       = htmlspecialchars($data['nama']);
+    $kelas      = $data['kelas'];
+    $alamat     = htmlspecialchars($data['alamat']);
+    $noTelepon  = htmlspecialchars($data['noTelepon']);
+    $spp        = $data['spp'];
+
+    $query      = "INSERT INTO siswa VALUES('', '$nisn', '$nis', '$nama', '$kelas', '$alamat', '$noTelepon', '$spp')";
+
+    mysqli_query($conn, $query);
+
+    // Buat kartu SPP
+    $bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    $idSiswa    = mysqli_insert_id($conn);
+    foreach ($bulan as $b) {
+        mysqli_query($conn, "INSERT INTO pembayaran VALUES('', '', '$idSiswa', '', '$b', '', '$spp', '')");
+    }
+
+    return mysqli_affected_rows($conn);
+}
+
+
 ?>
