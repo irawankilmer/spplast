@@ -13,6 +13,24 @@ if (isset($_GET['url'])) {
             require 'home.php';
             break;
 
+        // Kelas
+        case 'kelas':
+            require 'crud/kelas/home.php';
+            break;
+
+        case 'kelasAdd':
+            require 'crud/kelas/tambah.php';
+            break;
+
+        case 'kelasHapus':
+            require 'crud/kelas/hapus.php';
+            break;
+
+        case 'kelasEdit':
+            require 'crud/kelas/edit.php';
+            break;
+        // End Kelas
+
         default:
             require '404.php';
             break;

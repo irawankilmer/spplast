@@ -7,5 +7,6 @@
     <title>SPP - <?= $_SESSION['level']; ?></title>
 </head>
 <body>
+    <center>
 
 <?php require 'menu.php'; ?>
