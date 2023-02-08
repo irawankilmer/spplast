@@ -31,6 +31,24 @@ if (isset($_GET['url'])) {
             break;
         // End Kelas
 
+        // Spp
+        case 'spp':
+            require 'crud/spp/home.php';
+            break;
+
+        case 'sppAdd':
+            require 'crud/spp/tambah.php';
+            break;
+
+        case 'sppHapus':
+            require 'crud/spp/hapus.php';
+            break;
+
+        case 'sppEdit':
+            require 'crud/spp/edit.php';
+            break;
+        // End Spp
+
         default:
             require '404.php';
             break;
