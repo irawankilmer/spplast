@@ -59,3 +59,6 @@ Silahkan buat polder di xampp/htdocs, dalam contoh ini saya buat dengan nama con
 - hapus semua isi pada file index.php
 
 ### Untuk langkah selanjutnya, ikuti semua instruksi dari guru pembimbing.
+
+## Menu
+-> [Selanjutnya](https://github.com/irawankilmer/spplast/tree/2-sistem-login)
