@@ -2,7 +2,7 @@
 ## Perbaikan
 ### Session
 - User yang belum login tidak bisa mengakses halaman Admin, Petugas ataupun Siswa
-- User yang sudah login tidak bisa mengakses halaman login, ini untuk mencegak hancurnya data karena ada beberapa query yang mengambil data dari session
+- User yang sudah login tidak bisa mengakses halaman login, ini untuk mencegah hancurnya data karena ada beberapa query yang mengambil data dari session
 
 ### Hak Akses
 - Admin tidak bisa mengakses halaman petugas atau siswa dan sebaliknya
