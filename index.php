@@ -85,6 +85,20 @@ if (isset($_GET['url'])) {
             break;
         // End siswa
 
+        // pembayaran
+        case 'pembayaran':
+            require 'crud/pembayaran/home.php';
+            break;
+
+        case 'bayarlunas':
+            require 'crud/pembayaran/bayarlunas.php';
+            break;
+
+        case 'sppdetail':
+            require 'crud/pembayaran/detail.php';
+            break;
+        // End pembayaran
+
         default:
             require '404.php';
             break;

@@ -7,7 +7,7 @@
 <?php endif ?>
 
 <?php if($_SESSION['level'] === 'admin' || $_SESSION['level'] === 'petugas') : ?>
-    Pembayaran
+    <a href="index.php?url=pembayaran">Pembayaran</a>
 <?php endif ?>
 
 | <a href="auth/logout.php">Logout</a>

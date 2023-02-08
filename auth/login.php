@@ -10,6 +10,7 @@ if (isset($_POST['login'])) {
             $_SESSION['login'] = true;
             $_SESSION['nama'] = $data['namaPetugas'];
             $_SESSION['level'] = $data['level'];
+            $_SESSION['idPetugas'] = $data['idPetugas'];
             echo "<script>
                 alert('Anda berhasil login'),
                 window.location.href='index.php?url=home';
