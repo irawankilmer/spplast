@@ -49,6 +49,24 @@ if (isset($_GET['url'])) {
             break;
         // End Spp
 
+        // petugas
+        case 'petugas':
+            require 'crud/petugas/home.php';
+            break;
+
+        case 'petugasAdd':
+            require 'crud/petugas/tambah.php';
+            break;
+
+        case 'petugasHapus':
+            require 'crud/petugas/hapus.php';
+            break;
+
+        case 'petugasEdit':
+            require 'crud/petugas/edit.php';
+            break;
+        // End petugas
+
         default:
             require '404.php';
             break;

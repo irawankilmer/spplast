@@ -43,5 +43,13 @@ function hapusData($table, $where, $value)
     return mysqli_affected_rows($conn);
 }
 
+function cekData($table, $clausa, $value) {
+    global $conn;
+
+    $query = mysqli_query($conn, "SELECT * FROM $table WHERE $clausa = '$value'");
+
+    return mysqli_num_rows($query);
+}
+
 
 ?>
