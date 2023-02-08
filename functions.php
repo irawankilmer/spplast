@@ -92,5 +92,15 @@ function insertSiswaSpp($data)
     return mysqli_affected_rows($conn);
 }
 
+function hitungJumlah($table)
+{
+    global $conn;
+
+    $query = mysqli_query($conn, "SELECT * FROM $table");
+
+    return mysqli_num_rows($query);
+
+}
+
 
 ?>
