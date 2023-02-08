@@ -57,6 +57,7 @@ Silahkan buat polder di xampp/htdocs, dalam contoh ini saya buat dengan nama con
 ## Note
 - Lakukan langkah yang sama untuk membuat user dengan level petugas
 - hapus semua isi pada file index.php
+- Seluruh rangkaian panduan ini merupakan rangkuman dari materi yang sudah di jelaskan pada saat proses belajar mengajar di dalam kelas
 
 ### Untuk langkah selanjutnya, ikuti semua instruksi dari guru pembimbing.
 
