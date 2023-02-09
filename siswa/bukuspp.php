@@ -14,8 +14,13 @@ $no = 1;
 
  ?>
 
-	<h1>Biodata</h1>
-		<hr>
+
+ <div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Biodata</h4>
+	</div>
+	
+	<div class="card-body">
 		<label>Nisn :</label> <?= $siswa[0]['nisn'];?><br>
 		<label>Nis :</label> <?= $siswa[0]['nis'];?><br>
 		<label>Nama :</label> <?= $siswa[0]['nama'];?><br>
@@ -24,13 +29,21 @@ $no = 1;
 		<label>alamat :</label> <?= $siswa[0]['alamat'];?><br>
 		<label>noTelepon :</label> <?= $siswa[0]['noTelepon'];?><br>
 		<label>tahun :</label> <?= $siswa[0]['tahun'];?>
-		<br>
-		<br>
-		<hr>
-		<h1>Buku SPP</h1>
-		<a href="report/cetak.php?id=<?= $siswa[0]['idSiswa']; ?>">Cetak Buku SPP</a>
-		<hr>
-		<table border="1" cellpadding="10" cellspacing="0">
+	</div>
+</div>
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Buku SPP</h4>
+		<a href="report/cetak.php?id=<?= $siswa[0]['idSiswa']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+			<i class="fas fa-download"></i> Cetak Buku SPP
+		</a>
+	</div>
+
+	<div class="card-body">
+		
+		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		<thead>
 			<tr>
 				<td>#</td>
 				<td>Bulan</td>
@@ -39,6 +52,17 @@ $no = 1;
 				<td>Tanggal Di Bayar</td>
 				<td>Status</td>
 			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>#</td>
+				<td>Bulan</td>
+				<td>Tahun SPP</td>
+				<td>Tahun Dibayar</td>
+				<td>Tanggal Di Bayar</td>
+				<td>Status</td>
+			</tr>
+		</tfoot>
 
 			<?php foreach ($spp as $s): ?>
 				<tr>
@@ -49,7 +73,7 @@ $no = 1;
 						<?php elseif($s['jumlahBayar'] > 0 && $s['jumlahBayar'] < $s['nominal']): ?>
 							<?= $s['blnDiBayar']; ?>
 						<?php elseif($s['jumlahBayar'] == $s['nominal'] || $s['jumlahBayar'] >= $s['nominal']): ?>
-							<a href="index.php?url=sppdetail&&id=<?= $s['idPembayaran']; ?>"><?= $s['blnDiBayar']; ?></a>
+							<a class="btn btn-info" href="index.php?url=sppdetail&&id=<?= $s['idPembayaran']; ?>"><?= $s['blnDiBayar']; ?></a>
 						<?php endif ?>
 					</td>
 					<td><?= $s['tahun']; ?></td>
@@ -79,8 +103,10 @@ $no = 1;
 							Lunas
 						<?php endif ?>
 					</td>
-
 				</tr>
 				<?php $no++; ?>
 			<?php endforeach ?>
 		</table>
+
+	</div>
+</div>

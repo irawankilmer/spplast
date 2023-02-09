@@ -30,35 +30,58 @@ $spp   = selectData('spp', 'idSpp');
 
  ?>
 
- <form action="" method="post">
- 	<label for="nisn">NISN</label>
- 	<input type="text" name="nisn" id="nisn"><br>
+<div class="col-lg-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+	    <div class="card-header py-3">
+	        <h6>Tambah Data Siswa</h6>
+	    </div>
+	    <div class="card-body">
+		 <form action="" method="post">
+		    <div class="form-group">
+		    	<label for="nisn">nisn</label>
+		    	<input class="form-control" id="nisn" type="text" name="nisn">
+		    </div>
 
- 	<label for="nis">NIS</label>
- 	<input type="text" name="nis" id="nis"><br>
+		    <div class="form-group">
+		    	<label for="nis">nis</label>
+		    	<input class="form-control" id="nis" type="text" name="nis">
+		    </div>
 
- 	<label for="nama">Nama</label>
- 	<input type="text" name="nama" id="nama"><br>
+		    <div class="form-group">
+		    	<label for="nama">nama</label>
+		    	<input class="form-control" id="nama" type="text" name="nama">
+		    </div>
 
- 	<label for="kelas">Kelas</label>
- 	<select name="kelas">
- 		<?php foreach ($kelas as $k): ?>
- 			<option value="<?= $k['idKelas']; ?>"><?= $k['namaKelas']; ?></option>
- 		<?php endforeach ?>
- 	</select><br>
+		    <div class="form-group">
+		        <label for="kelas">Kelas</label>
+		        <select class="form-control" id="kelas" name="kelas">
+		            <?php foreach ($kelas as $k): ?>
+			 			<option value="<?= $k['idKelas']; ?>"><?= $k['namaKelas']; ?></option>
+			 		<?php endforeach ?>
+		        </select>
+		    </div>
 
- 	<label for="alamat">Alamat</label>
- 	<textarea name="alamat" id="alamat"></textarea><br>
+		    <div class="form-group"><label for="alamat">Alamat</label>
+		    	<textarea name="alamat" class="form-control" id="alamat" rows="3"></textarea>
+		    </div>
 
- 	<label for="noTelepon">no Telepon</label>
- 	<input type="text" name="noTelepon" id="noTelepon"><br>
+		    <div class="form-group">
+		    	<label for="noTelepon">no Telepon</label>
+		    	<input class="form-control" id="noTelepon" type="text" name="noTelepon">
+		    </div>
 
- 	<label for="spp">Tahun Spp</label>
- 	<select name="spp">
- 		<?php foreach ($spp as $s): ?>
- 			<option value="<?= $s['idSpp']; ?>"><?= $s['tahun']; ?></option>
- 		<?php endforeach ?>
- 	</select><br>
+		    <div class="form-group">
+		        <label for="spp">Tahun spp</label>
+		        <select class="form-control" id="spp" name="spp">
+		            <?php foreach ($spp as $s): ?>
+			 			<option value="<?= $s['idSpp']; ?>"><?= $s['tahun']; ?></option>
+			 		<?php endforeach ?>
+		        </select>
+		    </div>
 
- 	<input type="submit" name="tambah" value="tambah">
- </form>
+		    <input type="submit" name="tambah" value="tambah" class="btn btn-primary">
+		    
+		</form>
+		</div>
+	</div>
+</div>

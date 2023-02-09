@@ -35,19 +35,44 @@
 
  ?>
 
- <form action="" method="post">
- 	<input type="text" name="username" placeholder="Masukan username"><br>
- 	<input type="text" name="namaPetugas" placeholder="Masukan nama lengkap"><br>
+<div class="col-lg-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+	    <div class="card-header py-3">
+	        <h6>Tambah Data Petugas</h6>
+	    </div>
+	    <div class="card-body">
+		 <form action="" method="post">
+		    <div class="form-group">
+		    	<label for="username">username</label>
+		    	<input class="form-control" id="username" type="text" name="username">
+		    </div>
 
- 	<label for="level">Level</label>
- 	<select name="level">
- 		<option value="admin">Admin</option>
- 		<option value="petugas">Petugas</option>
- 	</select>
- 	<br>
+		    <div class="form-group">
+		    	<label for="namaPetugas">nama Petugas</label>
+		    	<input class="form-control" id="namaPetugas" type="text" name="namaPetugas">
+		    </div>
 
- 	<input type="password" name="password1" placeholder="Masukan password"><br>
- 	<input type="password" name="password2" placeholder="Konfirmasi password"><br>
+		    <div class="form-group">
+		        <label for="level">level</label>
+		        <select class="form-control" id="level" name="level">
+		            <option value="admin">Admin</option>
+		            <option value="petugas">Petugas</option>
+		        </select>
+		    </div>
 
- 	<input type="submit" name="tambah" value="tambah">
- </form>
+		    <div class="form-group">
+		    	<label for="password1">password</label>
+		    	<input class="form-control" id="password1" type="password" name="password1">
+		    </div>
+
+		    <div class="form-group">
+		    	<label for="password2">Konfirmasi password</label>
+		    	<input class="form-control" id="password2" type="password" name="password2">
+		    </div>
+
+		    <input type="submit" name="tambah" value="tambah" class="btn btn-primary">
+		    
+		</form>
+		</div>
+	</div>
+</div>

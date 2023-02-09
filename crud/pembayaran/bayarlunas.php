@@ -25,21 +25,36 @@
  ?>
 
 <h1>Buku Pembayaran SPP [<?= $data[0]['nama']; ?>]</h1>
-<h2>Tahun SPP [<?= $data[0]['tahun']; ?>]</h2>
-Nisn : <?= $data[0]['nisn']; ?><br>
-Nis : <?= $data[0]['nis']; ?><br>
-Kelas : <?= $data[0]['namaKelas']; ?><br>
-Jurusan : <?= $data[0]['kompetensiKeahlian']; ?><br>
-<hr>
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Tahun SPP [<?= $data[0]['tahun']; ?>]</h4>
+	</div>
 
-<form action="" method="post">
-	<label for="bulan">Bulan	: </label> <b><?= $data[0]['blnDiBayar']; ?></b><br>
+	<div class="card-body">
+		Nisn : <?= $data[0]['nisn']; ?><br>
+		Nis : <?= $data[0]['nis']; ?><br>
+		Kelas : <?= $data[0]['namaKelas']; ?><br>
+		Jurusan : <?= $data[0]['kompetensiKeahlian']; ?><br>
+	</div>
+</div>
 
-	<label>Tanggal Bayar [*Otomatis oleh sistem] : </label> <?= date('d-m-Y'); ?><br>
-	<label>Tahun di Bayar [*Otomatis oleh sistem] : </label> <?= date('Y'); ?><br>
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Bulan <?= $data[0]['blnDiBayar']; ?></h4>
+	</div>
 
-	<label for="jumlahBayar">Jumlah Bayar</label>
-	<input type="text" name="jumlahBayar" id="jumlahBayar" value="<?= $data[0]['jumlahBayar']; ?>"><br>
+	<div class="card-body">
+		<form action="" method="post">
+			<label>Tanggal Bayar [*Otomatis oleh sistem] : </label> <?= date('d-m-Y'); ?><br>
+			<label>Tahun di Bayar [*Otomatis oleh sistem] : </label> <?= date('Y'); ?><br>
 
-	<input type="submit" name="bayar" value="bayar">
-</form>
+			<label for="jumlahBayar">Jumlah Bayar</label>
+			<div class="col-lg-5">
+				<input class="form-control" type="text" name="jumlahBayar" id="jumlahBayar" value="<?= $data[0]['jumlahBayar']; ?>"><br>
+			</div>
+
+			<input type="submit" class="btn btn-primary" name="bayar" value="bayar">
+		</form>
+	</div>
+
+</div>

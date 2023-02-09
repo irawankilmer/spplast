@@ -34,7 +34,7 @@ if (isset($_POST['edit'])) {
 		    	<input class="form-control" id="nominal" type="text" name="nominal" value="<?= $data['nominal']; ?>">
 		    </div>
 
-		    <input type="submit" name="edit" value="edit" class="btn btn-primary">
+		    <input type="submit" name="edit" value="edit" class="btn btn-warning">
 		    
 		</form>
 		</div>

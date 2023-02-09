@@ -23,16 +23,29 @@ if (isset($_POST['cari'])) {
 
 
  ?>
+<h1 class="h3 mb-2 text-gray-800">Pembayaran SPP</h1>
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Pencarian Data Siswa</h4>
+	</div>
+	<div class="card-body">
+		<form action="" method="post">
+			<div class="form-group">
+				<input class="form-control" type="text" name="nisn" placeholder="Masukan NISN Siswa">
+				<input type="submit" class="btn btn-info" name="cari" value="cari">
+			</div>
+		</form>
+	</div>
+</div>
 
-<form action="" method="post">
-	<label for="nisn">Masukan NISN</label>
-	<input type="text" name="nisn" id="nisn">
-	<input type="submit" name="cari" value="cari">
-</form>
 
 <?php if (isset($data)): ?>
-	<h1>Biodata</h1>
-		<hr>
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Biodata</h4>
+	</div>
+	
+	<div class="card-body">
 		<label>Nisn :</label> <?= $data['nisn'];?><br>
 		<label>Nis :</label> <?= $data['nis'];?><br>
 		<label>Nama :</label> <?= $data['nama'];?><br>
@@ -41,13 +54,21 @@ if (isset($_POST['cari'])) {
 		<label>alamat :</label> <?= $data['alamat'];?><br>
 		<label>noTelepon :</label> <?= $data['noTelepon'];?><br>
 		<label>tahun :</label> <?= $data['tahun'];?>
-		<br>
-		<br>
-		<hr>
-		<h1>Buku SPP</h1>
-		<a href="report/cetak.php?id=<?= $data['idSiswa']; ?>">Cetak Buku SPP</a>
-		<hr>
-		<table border="1" cellpadding="10" cellspacing="0">
+	</div>
+</div>
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Buku SPP</h4>
+		<a href="report/cetak.php?id=<?= $data['idSiswa']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+			<i class="fas fa-download"></i> Cetak Buku SPP
+		</a>
+	</div>
+
+	<div class="card-body">
+		
+		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+		<thead>
 			<tr>
 				<td>#</td>
 				<td>Bulan</td>
@@ -57,6 +78,18 @@ if (isset($_POST['cari'])) {
 				<td>Status</td>
 				<td>Tindakan</td>
 			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>#</td>
+				<td>Bulan</td>
+				<td>Tahun SPP</td>
+				<td>Tahun Dibayar</td>
+				<td>Tanggal Di Bayar</td>
+				<td>Status</td>
+				<td>Tindakan</td>
+			</tr>
+		</tfoot>
 
 			<?php foreach ($spp as $s): ?>
 				<tr>
@@ -92,11 +125,11 @@ if (isset($_POST['cari'])) {
 
 					<td>
 						<?php if ($s['jumlahBayar'] == 0): ?>
-							<a href="index.php?url=bayarlunas&&id=<?= $s['idPembayaran']; ?>">Bayar</a>
-						<?php elseif($s['jumlahBayar'] > 0 && $s['jumlahBayar'] < $s['nominal']): ?>
-							<a href="index.php?url=bayarlunas&&id=<?= $s['idPembayaran']; ?>">Bayar Lunas</a>
+							<a class="btn btn-success" href="index.php?url=bayarlunas&&id=<?= $s['idPembayaran']; ?>">Bayar</a>
+						<?php elseif($s['jumlahBayar'] > 0 && $s['jumlahBayar'] <= $s['nominal']): ?>
+							<a class="btn btn-primary" href="index.php?url=bayarlunas&&id=<?= $s['idPembayaran']; ?>">Bayar Lunas</a>
 						<?php elseif($s['jumlahBayar'] == $s['nominal'] || $s['jumlahBayar'] >= $s['nominal']): ?>
-							<a href="index.php?url=sppdetail&&id=<?= $s['idPembayaran']; ?>">Detail</a>
+							<a class="btn btn-info" href="index.php?url=sppdetail&&id=<?= $s['idPembayaran']; ?>">Detail</a>
 						<?php endif ?>
 					</td>
 
@@ -104,5 +137,8 @@ if (isset($_POST['cari'])) {
 				<?php $no++; ?>
 			<?php endforeach ?>
 		</table>
+
+	</div>
+</div>
 
 <?php endif ?>

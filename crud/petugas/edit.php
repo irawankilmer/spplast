@@ -16,7 +16,22 @@ if (isset($_POST['edit'])) {
 
  ?>
 
- <form action="" method="post">
- 	<input type="text" name="namaPetugas" value="<?= $data['namaPetugas']; ?>"><br>
- 	<input type="submit" name="edit" value="edit">
- </form>
+<div class="col-lg-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+	    <div class="card-header py-3">
+	        <h6>Tambah Data Petugas</h6>
+	        <p style="color:red;">*Admin hanya bisa di edit nama saja</p>
+	    </div>
+	    <div class="card-body">
+		 <form action="" method="post">
+		    <div class="form-group">
+		    	<label for="namaPetugas">nama Petugas</label>
+		    	<input class="form-control" id="namaPetugas" type="text" name="namaPetugas" value="<?= $data['namaPetugas']; ?>">
+		    </div>
+
+		    <input type="submit" name="edit" value="edit" class="btn btn-warning">
+		    
+		</form>
+		</div>
+	</div>
+</div>

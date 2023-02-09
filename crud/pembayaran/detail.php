@@ -9,24 +9,33 @@
 
 
  ?>
+<h1 class="h3 mb-2 text-gray-800">Buku SPP</h1>
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Detail Pembayaran SPP Bulan <?= $data[0]['blnDiBayar']; ?></h4>
+		<a href="report/cetakbulanan.php?id=<?= $data[0]['idPembayaran']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+			<i class="fas fa-download"></i> Cetak Buku SPP
+		</a>
+	</div>
 
-<h1>Buku Pembayaran SPP [<?= $data[0]['nama']; ?>]</h1>
-<h2>Tahun SPP [<?= $data[0]['tahun']; ?>]</h2>
-<h2>Bulan [<?= $data[0]['blnDiBayar']; ?>]</h2>
-<h2>Status [LUNAS]</h2>
-<h2>Petugas Pembayaran [<?= $data[0]['namaPetugas']; ?>]</h2>
+	<div class="card-body">
+		<h3>Buku Pembayaran SPP [<?= $data[0]['nama']; ?>]</h3>
+		<h5>Tahun SPP [<?= $data[0]['tahun']; ?>]</h5>
+		<h5>Status [LUNAS]</h5>
+		<h5>Petugas Pembayaran [<?= $data[0]['namaPetugas']; ?>]</h5>
+	</div>
+</div>
 
-<hr>
-<u><h3>Profil</h3></u>
-Nama : <?= $data[0]['nama']; ?><br>
-Nisn : <?= $data[0]['nisn']; ?><br>
-Nis : <?= $data[0]['nis']; ?><br>
-Kelas : <?= $data[0]['namaKelas']; ?><br>
-Jurusan : <?= $data[0]['kompetensiKeahlian']; ?><br>
-<hr>
+<div class="card o-hidden border-0 shadow-lg my-5">
+	<div class="card-header py-3">
+		<h4>Profil Siswa</h4>
+	</div>
 
-<?php if ($_SESSION['level'] == 'siswa'): ?>
-	<a href="index.php?url=bukuspp">Kembali</a> | 
-<?php endif ?>
-
-<a href="report/cetakbulanan.php?id=<?= $data[0]['idPembayaran']; ?>">Cetak</a>
+	<div class="card-body">
+		Nama : <?= $data[0]['nama']; ?><br>
+		Nisn : <?= $data[0]['nisn']; ?><br>
+		Nis : <?= $data[0]['nis']; ?><br>
+		Kelas : <?= $data[0]['namaKelas']; ?><br>
+		Jurusan : <?= $data[0]['kompetensiKeahlian']; ?><br>
+	</div>
+</div>
