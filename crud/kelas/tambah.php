@@ -14,8 +14,26 @@
 
  ?>
 
- <form action="" method="post">
- 	<input type="text" name="namaKelas"><br>
- 	<input type="text" name="kompetensiKeahlian"><br>
- 	<input type="submit" name="tambah" value="tambah">
- </form>
+<div class="col-lg-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+	    <div class="card-header py-3">
+	        <h6>Tambah Data Kelas</h6>
+	    </div>
+	    <div class="card-body">
+		 <form action="" method="post">
+		    <div class="form-group">
+		    	<label for="namaKelas">Nama Kelas</label>
+		    	<input class="form-control" id="namaKelas" type="text" name="namaKelas">
+		    </div>
+
+		    <div class="form-group">
+		    	<label for="kompetensiKeahlian">Kompetensi Keahlian</label>
+		    	<input class="form-control" id="kompetensiKeahlian" type="text" name="kompetensiKeahlian">
+		    </div>
+
+		    <input type="submit" name="tambah" value="tambah" class="btn btn-primary">
+		    
+		</form>
+		</div>
+	</div>
+</div>

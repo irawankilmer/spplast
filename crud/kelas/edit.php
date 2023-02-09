@@ -17,8 +17,26 @@ if (isset($_POST['edit'])) {
 
  ?>
 
- <form action="" method="post">
- 	<input type="text" name="namaKelas" value="<?= $data['namaKelas']; ?>"><br>
- 	<input type="text" name="kompetensiKeahlian" value="<?= $data['kompetensiKeahlian']; ?>"><br>
- 	<input type="submit" name="edit" value="edit">
- </form>
+<div class="col-lg-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+	    <div class="card-header py-3">
+	        <h6>Edit Data Kelas</h6>
+	    </div>
+	    <div class="card-body">
+		 <form action="" method="post">
+		    <div class="form-group">
+		    	<label for="namaKelas">Nama Kelas</label>
+		    	<input class="form-control" id="namaKelas" type="text" value="<?= $data['namaKelas']; ?>" name="namaKelas">
+		    </div>
+
+		    <div class="form-group">
+		    	<label for="kompetensiKeahlian">Kompetensi Keahlian</label>
+		    	<input class="form-control" id="kompetensiKeahlian" type="text" value="<?= $data['kompetensiKeahlian']; ?>" name="kompetensiKeahlian">
+		    </div>
+
+		    <input type="submit" name="edit" value="edit" class="btn btn-warning">
+		    
+		</form>
+		</div>
+	</div>
+</div>
