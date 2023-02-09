@@ -14,8 +14,26 @@
 
  ?>
 
- <form action="" method="post">
- 	<input type="text" name="tahun"><br>
- 	<input type="text" name="nominal"><br>
- 	<input type="submit" name="tambah" value="tambah">
- </form>
+<div class="col-lg-6">
+	<div class="card o-hidden border-0 shadow-lg my-5">
+	    <div class="card-header py-3">
+	        <h6>Tambah Data SPP</h6>
+	    </div>
+	    <div class="card-body">
+		 <form action="" method="post">
+		    <div class="form-group">
+		    	<label for="tahun">Tahun SPP</label>
+		    	<input class="form-control" id="tahun" type="text" name="tahun">
+		    </div>
+
+		    <div class="form-group">
+		    	<label for="nominal">Nominal</label>
+		    	<input class="form-control" id="nominal" type="text" name="nominal">
+		    </div>
+
+		    <input type="submit" name="tambah" value="tambah" class="btn btn-primary">
+		    
+		</form>
+		</div>
+	</div>
+</div>
