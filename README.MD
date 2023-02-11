@@ -9,5 +9,5 @@ Jika masih terdapat error silahkan perbaiki sendiri atau tanya langsung ke Guru 
 # Terimakasih
 
 ## Menu
-<- [Sebelumnya](https://github.com/irawankilmer/spplast/tree/12-revisi-tampilan-spp)
+<- [Sebelumnya](https://github.com/irawankilmer/spplast/tree/12-revisi-tampilan-spp)<br>
 -> [Selanjutnya](https://github.com/irawankilmer/spplast/tree/14-revisi-TAMAT)
