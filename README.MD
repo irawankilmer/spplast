@@ -1,4 +1,4 @@
-# Revisi tampilan semua (SELESAI)
+# Revisi tampilan semua
 Semua langkah sudah selesai dan Aplikasi Pembayaran SPP Online sudah bisa di gunakan (hanya) untuk kepentingan pembelajaran<br>
 Jika masih terdapat error silahkan perbaiki sendiri atau tanya langsung ke Guru Pembimbing
 
@@ -10,3 +10,4 @@ Jika masih terdapat error silahkan perbaiki sendiri atau tanya langsung ke Guru 
 
 ## Menu
 <- [Sebelumnya](https://github.com/irawankilmer/spplast/tree/12-revisi-tampilan-spp)
+-> [Selanjutnya](https://github.com/irawankilmer/spplast/tree/14-revisi-TAMAT)
