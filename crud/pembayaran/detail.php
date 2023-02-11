@@ -13,9 +13,12 @@
 <div class="card o-hidden border-0 shadow-lg my-5">
 	<div class="card-header py-3">
 		<h4>Detail Pembayaran SPP Bulan <?= $data[0]['blnDiBayar']; ?></h4>
+		<?php if ($_SESSION['level'] == 'admin'): ?>
+			
 		<a href="report/cetakbulanan.php?id=<?= $data[0]['idPembayaran']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
 			<i class="fas fa-download"></i> Cetak Buku SPP
 		</a>
+		<?php endif ?>
 	</div>
 
 	<div class="card-body">

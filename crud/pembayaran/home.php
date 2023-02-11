@@ -60,9 +60,11 @@ if (isset($_POST['cari'])) {
 <div class="card o-hidden border-0 shadow-lg my-5">
 	<div class="card-header py-3">
 		<h4>Buku SPP</h4>
-		<a href="report/cetak.php?id=<?= $data['idSiswa']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-			<i class="fas fa-download"></i> Cetak Buku SPP
-		</a>
+		<?php if ($_SESSION['level'] == 'admin'): ?>
+			<a href="report/cetak.php?id=<?= $data['idSiswa']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+				<i class="fas fa-download"></i> Cetak Buku SPP
+			</a>
+		<?php endif ?>
 	</div>
 
 	<div class="card-body">

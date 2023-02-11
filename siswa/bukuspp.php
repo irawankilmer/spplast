@@ -35,9 +35,6 @@ $no = 1;
 <div class="card o-hidden border-0 shadow-lg my-5">
 	<div class="card-header py-3">
 		<h4>Buku SPP</h4>
-		<a href="report/cetak.php?id=<?= $siswa[0]['idSiswa']; ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-			<i class="fas fa-download"></i> Cetak Buku SPP
-		</a>
 	</div>
 
 	<div class="card-body">

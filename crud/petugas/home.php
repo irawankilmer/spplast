@@ -1,6 +1,6 @@
 <?php 
-
-    $data  = selectData('petugas', 'idPetugas');
+    $id = $_SESSION['idPetugas'];
+    $data  = selectDataNot('petugas', 'idPetugas', $id);
     $no = 1;
 
 ?>

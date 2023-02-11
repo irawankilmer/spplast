@@ -1,12 +1,10 @@
-# Revisi tampilan semua (SELESAI)
-Semua langkah sudah selesai dan Aplikasi Pembayaran SPP Online sudah bisa di gunakan (hanya) untuk kepentingan pembelajaran<br>
-Jika masih terdapat error silahkan perbaiki sendiri atau tanya langsung ke Guru Pembimbing
+# Revisi Terakhir
 
-## Catatan
-- Perbaiki sistem petugas, dimana admin yang login masih bisa menghapus data nya sendiri.
-- Deskripsi tindakan pada halaman pembayaran(Bayar, Bayar Lunas dan detail) masih belum sempurna, perbaiki algoritma-nya
-
-# Terimakasih
+Ada beberapa kesalahan yang di perbaiki pada langkah terakhir ini, diantaranya.
+## Admin yang login bisa menghapus data-nya sendiri
+Hal ini akan mengakibatkan tidak ada user(Admin) yang bisa masuk ke dalam sistem ketika semua data tidak sengaja terhapus
+## Menghapus akses report PDF
+Seperti yang tertera di soal UKK paket 1, bahwa hanya Admin yang bisa mencetak bukti pembayaran SPP, sedangkan user dengan level petugas dan siswa tidak bisa
 
 ## Menu
-<- [Sebelumnya](https://github.com/irawankilmer/spplast/tree/12-revisi-tampilan-spp)
+<b>TAMAT</b>

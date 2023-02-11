@@ -1,6 +1,6 @@
 <?php 
 
-$conn = mysqli_connect('localhost', 'root', '', 'coba');
+$conn = mysqli_connect('localhost', 'root', '', 'cobaa');
 
 function selectData($table, $order) {
     global $conn;
@@ -100,6 +100,20 @@ function hitungJumlah($table)
 
     return mysqli_num_rows($query);
 
+}
+
+function selectDataNot($table, $not, $value) {
+    global $conn;
+
+    $query = mysqli_query($conn, "SELECT * FROM $table WHERE NOT $not = '$value'");
+
+    $rows = [];
+
+    while ($row = mysqli_fetch_assoc($query)) {
+        $rows[] = $row;
+    }
+
+    return $rows;
 }
 
 
