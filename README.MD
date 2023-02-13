@@ -1,4 +1,5 @@
 # Persiapan dan Pembuatan Database
+[Link Soal Ujikom](https://drive.google.com/drive/mobile/folders/1d7deY05NTZQesQpEP2UuLJSKVhN0DqbY?token=K1IxOUg4S3E3bEdPaEtVVmtVaG8zQT09) 
 ## Desain Database
 Silahkan buat database dan beberapa tabel nya seperti yang terlihat pada gambar berikut<br>
 <img src="https://github.com/irawankilmer/spplast/blob/main/img/deisgn.png">
