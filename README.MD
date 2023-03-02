@@ -62,7 +62,7 @@ Silahkan buat polder di xampp/htdocs, dalam contoh ini saya buat dengan nama con
 - Seluruh rangkaian panduan ini merupakan rangkuman dari materi yang sudah di jelaskan pada saat proses belajar mengajar di dalam kelas
 
 ## Informasi
-[Belajar Investasi](https://www.irawan.me/)<br>
+[Belajar Investasi](https://irawan.me/)<br>
 [Jasa Penulis Artikel Seo Profesional](https://rajawriter.com/)
 
 ### Untuk langkah selanjutnya, ikuti semua instruksi dari guru pembimbing.
