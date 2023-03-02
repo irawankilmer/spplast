@@ -61,6 +61,10 @@ Silahkan buat polder di xampp/htdocs, dalam contoh ini saya buat dengan nama con
 - hapus semua isi pada file index.php
 - Seluruh rangkaian panduan ini merupakan rangkuman dari materi yang sudah di jelaskan pada saat proses belajar mengajar di dalam kelas
 
+## Informasi
+[Belajar Investasi](https://www.irawan.me/)<br>
+[Jasa Penulis Artikel Seo Profesional](https://rajawriter.com/)
+
 ### Untuk langkah selanjutnya, ikuti semua instruksi dari guru pembimbing.
 
 ## Menu
